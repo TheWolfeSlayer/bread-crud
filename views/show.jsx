@@ -2,7 +2,6 @@ const React = require('react')
 const Default = require('./layouts/default')
 
 function Show({ bread, index } ) {
-    console.log(bread)
     return (
         <Default>
             
@@ -15,7 +14,10 @@ function Show({ bread, index } ) {
                 have gluten
             </p>
             <img src={bread.image} alt={bread.name} />
-            <form action={`/breads/${index}?_method=delete`} method='POST'>
+            <a href={`/breads/${index}/edit`} method='POST'>
+                <button>edit</button>
+            </a>
+            <form action={`/breads/${index}?_method=DELETE`} method='POST'>
                 <input type='submit' value='DELETE' />
             </form>
             <li>
