@@ -4,7 +4,6 @@ const Default = require('./layouts/default')
 function Show({ bread, index } ) {
     return (
         <Default>
-            
             <h3>{bread.name}</h3>
             <p>
                 and it 
